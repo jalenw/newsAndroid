@@ -1,0 +1,12 @@
+
+一、定义app主要颜色 适配尺寸 样式
+二、集成gson解析
+三、集成glide   加载框架
+四、定义常用的工具类
+五、定义基类 BseActivity BaseFragment
+六、集成基于okhttp的okgo网络框架
+
+config  全局配置包
+net     网络请求包
+UI      基类界面包
+utils   工具包

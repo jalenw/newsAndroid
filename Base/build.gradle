@@ -1,0 +1,46 @@
+apply plugin: 'com.android.library'
+android {
+    signingConfigs {
+//        debug {
+//            keyAlias 'wenwan'
+//            keyPassword '123456'
+//            storeFile file('E:/svn_2/WenWan/app/keystore/wenwan.jks')
+//            storePassword '123456'
+//        }
+    }
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {    //引用so库
+        main.jniLibs.srcDirs = ['libs']
+    }
+    buildToolsVersion '26.0.2'
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:appcompat-v7:' + rootProject.ext.supportLibraryVersion;
+    compile 'com.android.support:design:' + rootProject.ext.supportLibraryVersion;
+    compile 'com.android.support:support-v4:'+ rootProject.ext.supportLibraryVersion;
+    compile 'com.android.support:recyclerview-v7:'+ rootProject.ext.supportLibraryVersion;
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
+    compile 'com.jakewharton:butterknife:8.6.0'
+    compile 'com.google.code.gson:gson:2.6.2'
+    compile 'com.android.support:multidex:1.0.2'
+    compile 'com.github.LuckSiege.PictureSelector:picture_library:v2.1.7'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.lzy.net:okgo:2.1.4'
+    compile 'org.greenrobot:eventbus:3.0.0'
+}

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/bar_rll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/barHeight"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:paddingLeft="@dimen/padding"
+            android:text="我要爆料"
+            android:textColor="@color/whiteText"
+            android:textSize="@dimen/titleBar" />
+
+        <TextView
+            android:id="@+id/draft_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:paddingRight="@dimen/padding"
+            android:text="草稿箱"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/title_et"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/bar_rll"
+        android:background="@null"
+        android:hint="标题"
+        android:paddingLeft="@dimen/padding"
+        android:paddingRight="45dp"
+        android:textSize="@dimen/textSize" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignBottom="@id/title_et"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:gravity="center"
+        android:text="0/30"
+        android:textColor="@color/hintColor"
+        android:textSize="14sp" />
+
+    <View
+        android:id="@+id/gap_v"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/title_et"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/lineBg" />
+
+    <EditText
+        android:id="@+id/content_et"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_below="@id/title_et"
+        android:layout_marginTop="10dp"
+        android:background="@null"
+        android:gravity="top"
+        android:hint="详细内容"
+        android:paddingLeft="@dimen/padding"
+        android:paddingRight="@dimen/rightPadding"
+        android:textColorHint="#ADAEB3"
+        android:textSize="@dimen/textSize" />
+
+    <ImageView
+        android:id="@+id/add_pic_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/content_et"
+        android:layout_marginLeft="15dp"
+        android:src="@mipmap/add_pic" />
+    <ImageView
+        android:scaleType="centerCrop"
+        android:layout_toRightOf="@id/add_pic_iv"
+        android:id="@+id/show_iv"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/content_et"
+        android:layout_marginLeft="15dp"
+        />
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/gap_v_2"
+        android:layout_alignEnd="@+id/draft_btn"
+        android:layout_alignRight="@+id/draft_btn"
+        android:text="0/200"
+        android:textColor="@color/hintColor"
+        android:textSize="14sp" />
+
+    <View
+        android:id="@+id/gap_v_2"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@id/add_pic_iv"
+        android:layout_marginTop="20dp"
+        android:background="@color/lineBg" />
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/draft_btn"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="50dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/shape_pubnish_grey"
+        android:text="存草稿"
+        android:textColor="@color/blackText" />
+
+    <TextView
+        android:gravity="center"
+        android:id="@+id/punish_btn"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:layout_marginRight="15dp"
+        android:layout_toLeftOf="@id/draft_btn"
+        android:background="@drawable/shape_pubnish_red"
+        android:text="发布"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

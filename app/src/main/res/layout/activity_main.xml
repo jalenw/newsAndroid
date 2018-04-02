@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/rg_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <RadioGroup
+            android:id="@+id/main_rg"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+
+            android:background="@color/white"
+            android:elevation="10dp"
+            android:gravity="bottom|center_horizontal"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="0dp">
+
+            <RadioButton
+                android:id="@+id/news_rb"
+                style="@style/TabButton"
+                android:checked="true"
+                android:drawableTop="@drawable/home_news_db"
+                android:text="新闻" />
+
+            <RadioButton
+                android:id="@+id/disclose_rb"
+                style="@style/TabButton"
+                android:drawableTop="@drawable/home_disclose"
+                android:text="爆料" />
+
+            <RadioButton
+                android:id="@+id/mine_rb"
+                style="@style/TabButton"
+                android:drawableTop="@drawable/home_mine"
+                android:text="我的" />
+
+        </RadioGroup>>
+    </RelativeLayout>
+
+    <com.intexh.news.widget.NoScrollViewpager
+        android:id="@+id/main_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rg_rl"
+    />
+    <include
+        android:visibility="gone"
+        android:clickable="true"
+        android:id="@+id/introduce_ll"
+        layout="@layout/layout_newbird"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</RelativeLayout>

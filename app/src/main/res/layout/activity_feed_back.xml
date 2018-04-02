@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/bar_rll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/barHeight"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/back_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:src="@mipmap/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:paddingLeft="@dimen/padding"
+            android:text="意见反馈"
+            android:textColor="@color/whiteText"
+            android:textSize="@dimen/titleBar" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/draft_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:paddingRight="@dimen/padding"
+            android:text="草稿箱"
+            android:textColor="@color/white"
+            android:textSize="@dimen/textSize" />
+    </RelativeLayout>
+
+
+    <EditText
+        android:textColor="@color/blackText"
+        android:id="@+id/content_et"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_below="@id/bar_rll"
+        android:background="@null"
+        android:gravity="top"
+        android:hint="请输入您的反馈内容"
+        android:padding="15dp"
+        android:textColorHint="#ADAEB3"
+        android:textSize="@dimen/textSize" />
+
+    <ImageView
+        android:id="@+id/add_pic_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/content_et"
+        android:layout_marginLeft="15dp"
+        android:src="@mipmap/add_pic" />
+    <ImageView
+        android:scaleType="centerCrop"
+        android:layout_toRightOf="@id/add_pic_iv"
+        android:id="@+id/show_iv"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@id/content_et"
+        android:layout_marginLeft="15dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/add_pic_iv"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:text="0/200"
+        android:textColor="@color/hintColor"
+        android:textSize="14sp" />
+
+    <View
+        android:id="@+id/gap_v_2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/add_pic_iv"
+        android:layout_marginTop="20dp"
+        android:background="@color/lineBg" />
+
+    <TextView
+        android:background="@color/mode_default_bg"
+        android:id="@+id/tag_phone_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="44dp"
+        android:layout_below="@id/gap_v_2"
+        android:gravity="center_vertical"
+        android:textColor="@color/blackText"
+        android:paddingLeft="15dp"
+        android:text="联系电话" />
+
+    <EditText
+        android:textColorHint="#ADAEB3"
+        android:id="@+id/phone_edt"
+        android:textSize="15sp"
+        android:hint="（选填，仅工作人员可见）"
+        android:paddingLeft="5dp"
+        android:background="@color/mode_default_bg"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_below="@id/gap_v_2"
+        android:layout_toRightOf="@id/tag_phone_tv" />
+
+    <!--<TextView-->
+        <!--android:visibility="gone"-->
+        <!--android:id="@+id/draft_btn"-->
+        <!--android:layout_width="100dp"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_marginBottom="50dp"-->
+        <!--android:layout_marginRight="15dp"-->
+        <!--android:background="@drawable/shape_pubnish_grey"-->
+        <!--android:gravity="center"-->
+        <!--android:text="存草稿"-->
+        <!--android:textColor="@color/blackText" />-->
+
+    <TextView
+        android:layout_alignParentRight="true"
+        android:id="@+id/punish_btn"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/shape_pubnish_red"
+        android:gravity="center"
+        android:text="发布"
+        android:textColor="@color/whiteText" />
+
+</RelativeLayout>

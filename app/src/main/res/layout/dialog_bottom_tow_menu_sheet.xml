@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/popup_window"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom|center"
+    android:paddingLeft="10dp"
+    android:padding="10dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="1dp"
+        android:layout_width="match_parent">
+
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textColor="@color/blackText"
+            android:text="刷新"
+            android:gravity="center"
+            android:background="@drawable/bottom_menu1_dialog_bg_selector"
+            android:textSize="14sp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#d1d1d1"/>
+        <TextView
+            android:id="@+id/menu1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="分享"
+            android:gravity="center"
+            android:textColor="@color/blackText"
+            android:background="@drawable/bottom_menu_dialog_bg_selector"
+            android:textSize="14sp"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#d1d1d1"/>
+        <TextView
+            android:id="@+id/menu2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="其他浏览器打开"
+            android:gravity="center"
+            android:textColor="@color/blackText"
+            android:background="@drawable/bottom_menu2_dialog_bg_selector"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/cancel"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:text="取消"
+        android:textColor="@color/blackText"
+        android:background="@drawable/bottom_menu_cancel_dialog_selector"
+        android:textSize="14sp"/>
+
+</LinearLayout>

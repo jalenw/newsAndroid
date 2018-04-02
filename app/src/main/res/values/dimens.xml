@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--间距-->
+    <dimen name="padding">15dp</dimen>
+    <dimen name="rightPadding">15dp</dimen>
+    <dimen name="barHeight">40dp</dimen>
+    <!--字号-->
+    <dimen name="titleBar">18sp</dimen>
+    <dimen name="titleNavigation">17sp</dimen>
+    <dimen name="textSize">16sp</dimen>
+    <dimen name="assistTextSize">12sp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+</resources>

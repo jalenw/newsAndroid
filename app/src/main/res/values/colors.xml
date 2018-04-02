@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#DF3031</color>
+    <color name="colorPrimaryDark">#DF3031</color>
+    <color name="colorAccent">#DF3031</color>
+    <color name="defaultBG">#F2F2F2</color>
+    <color name="whitePress">#D5D5D5</color>
+    <!--字体颜色-->
+    <!--<color name="defaultGrey">#666666</color>-->
+    <color name="assistText">#8F8E94</color>
+    <color name="blackText">#333333</color>
+    <color name="white">#FFFFFF</color>
+    <color name="homeGrey">#888888</color>
+    <color name="whiteText">#FFFFFF</color>
+    <color name="redText">#E51C23</color>
+    <color name="blackTextDark">#030303</color>
+    <color name="redline">#DF3031</color>
+    <color name="hintColor">#cccccc</color>
+    <color name="lineBg">#F4F4F4</color>
+    <color name="greyRed">#66DF3031</color>
+
+    <!--mode-->
+    <color name="mode_navigate">#DF3031</color>
+    <color name="mode_default_bg">#F0F0F0</color>
+    <color name="mode_white">#FFFFFF</color>
+    <color name="mode_dark">#F0F0F0</color>
+    <color name="mode_line_gap">#E5E5E5</color>
+    <color name="mode_news_time">#666666</color>
+    <color name="mode_line_bg">#E5E5E5</color>
+</resources>

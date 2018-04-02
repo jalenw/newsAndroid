@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">选报</string>
+    <string name="policy_be_author">按国家规定，需实名认证，请填写您的真实信息\n请放心填写，信息只供实名认证使用，平台不留存\n身份信息要与手机号实名信息一致</string>
+    <string name="title_activity_show_picture">ShowPicture</string>
+</resources>

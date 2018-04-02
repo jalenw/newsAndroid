@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#99000000"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/hint_dialog_bg_shape">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:text="您的赞赏，是对我们最大的鼓励！"
+            android:textColor="@color/blackText"
+            android:textSize="15sp" />
+        <ImageView
+            android:id="@+id/close_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="10dp"
+            android:src="@mipmap/close" />
+
+
+        <RadioGroup
+            android:id="@+id/price_rg"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_below="@id/close_iv"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:paddingTop="10dp">
+
+            <RadioButton
+                android:id="@+id/low_price_rb"
+                style="@style/priceButton"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="2元" />
+
+            <RadioButton
+                android:id="@+id/mid_price_rb"
+                style="@style/priceButton"
+                android:layout_weight="1"
+                android:text="5元" />
+
+            <RadioButton
+                android:id="@+id/high_price_rb"
+                style="@style/priceButton"
+                android:layout_weight="1"
+                android:text="8元" />
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/type_rg"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_below="@id/price_rg"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:checked="true"
+                android:id="@+id/wechat_pay_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="25dp"
+                android:layout_weight="1"
+                android:text="微信支付"
+                android:textColor="@color/blackText" />
+
+            <RadioButton
+                android:id="@+id/ali_pay_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="25dp"
+                android:layout_weight="1"
+                android:text="支付宝支付"
+                android:textColor="@color/blackText" />
+        </RadioGroup>
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/reward_btn"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/type_rg"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/reward_bg"
+            android:text="赞赏"
+            android:textColor="@color/blackText" />
+    </RelativeLayout>
+
+
+</LinearLayout>

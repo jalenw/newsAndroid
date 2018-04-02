@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="1dp"
+    android:paddingBottom="20dp"
+    android:background="@color/white">
+
+    <TextView
+        android:paddingLeft="15dp"
+        android:id="@+id/time_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="2017-12-1 "
+        android:textColor="@color/blackText"
+        android:textSize="13sp" />
+    <TextView
+        android:paddingLeft="5dp"
+        android:layout_toRightOf="@id/time_tv"
+        android:id="@+id/type_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/colorAccent"
+        android:textSize="13sp" />
+    <TextView
+        android:paddingLeft="5dp"
+        android:layout_toRightOf="@id/type_tv"
+        android:id="@+id/author_tv_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:textColor="@color/blackText"
+        android:textSize="13sp" />
+    <TextView
+        android:id="@+id/delete_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="15dp"
+
+        android:text="删除"
+        android:textColor="@color/blackText"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/content_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/time_tv"
+        android:padding="15dp"
+        android:text="SKT1  faker defeat "
+        android:textColor="@color/blackText"
+        android:textSize="16sp" />
+</RelativeLayout>

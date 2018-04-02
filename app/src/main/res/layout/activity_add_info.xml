@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mode_default_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/bar_rll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/barHeight"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/back_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:src="@mipmap/back" />
+
+        <TextView
+            android:id="@+id/draft_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:paddingRight="@dimen/padding"
+            android:text="草稿箱"
+            android:textColor="@color/whiteText"
+            android:textSize="@dimen/textSize" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:textColor="@color/blackText"
+            android:id="@+id/title_et"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@null"
+            android:hint="标题"
+            android:textColorHint="#ADAEB3"
+            android:paddingLeft="@dimen/padding"
+            android:paddingRight="45dp"
+            android:textSize="@dimen/textSize" />
+
+        <TextView
+            android:id="@+id/title_size_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignBottom="@id/title_et"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:gravity="center"
+            android:text="0/30"
+            android:textColor="@color/hintColor"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+
+    <View
+        android:id="@+id/gap_v"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/title_et"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/mode_line_bg" />
+
+    <RelativeLayout
+        android:paddingBottom="10dp"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:textColor="@color/blackText"
+            android:id="@+id/content_et"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="10dp"
+            android:background="@null"
+            android:gravity="top"
+            android:hint="详细内容"
+            android:paddingLeft="@dimen/padding"
+            android:paddingRight="@dimen/rightPadding"
+            android:textColorHint="#ADAEB3"
+            android:textSize="@dimen/textSize" />
+
+        <ImageView
+            android:id="@+id/add_pic_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/content_et"
+            android:layout_marginLeft="15dp"
+            android:src="@mipmap/add_pic" />
+
+        <ImageView
+            android:id="@+id/show_iv"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_below="@id/content_et"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/add_pic_iv"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/content_size_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/content_et"
+            android:layout_marginRight="15dp"
+            android:text="0/200"
+            android:textColor="@color/hintColor"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:id="@+id/punish_time_ll"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/gap_v_2"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:text="发布时间"
+            android:textColor="@color/blackText" />
+
+        <TextView
+            android:id="@+id/punish_time_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="end|center_vertical"
+            android:paddingRight="15dp"
+            android:textColor="@color/blackText" />
+
+    </LinearLayout>
+
+    <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:layout_below="@id/punish_time_ll"-->
+        <!--android:background="@color/mode_line_bg" />-->
+
+    <LinearLayout
+        android:id="@+id/punish_clumn_ll"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="15dp"
+            android:text="栏目"
+            android:textColor="@color/blackText" />
+
+        <TextView
+            android:id="@+id/column_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="end|center_vertical"
+            android:paddingRight="15dp"
+            android:textColor="@color/blackText" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        >
+
+        <CheckBox
+
+            android:textColor="@color/blackText"
+            android:text="要闻飘红"
+            android:layout_weight="1"
+            android:id="@+id/redText_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp" />
+        <TextView
+
+            android:id="@+id/punish_btn"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:layout_toLeftOf="@id/draft_btn"
+            android:background="@drawable/shape_pubnish_red"
+            android:gravity="center"
+            android:text="发布"
+            android:textColor="@color/whiteText" />
+        <TextView
+            android:id="@+id/draft_btn"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/shape_pubnish_grey"
+            android:gravity="center"
+            android:text="存草稿"
+            android:textColor="@color/blackText" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mode_default_bg"
+    android:orientation="vertical"
+    tools:context="com.intexh.news.moudle.news.ui.SearchActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/bar_rll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/barHeight"
+        android:background="@color/colorPrimary"
+        android:focusable="true">
+
+        <ImageView
+            android:id="@+id/back_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:src="@mipmap/back" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="2dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@id/back_iv"
+            android:background="@drawable/shap_search_bg">
+
+            <EditText
+                android:textColor="@color/blackText"
+                android:id="@+id/search_edt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:drawableLeft="@mipmap/search_bar"
+                android:drawablePadding="5dp"
+                android:paddingLeft="10dp" />
+
+            <TextView
+                android:id="@+id/search_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:paddingRight="15dp"
+                android:text="搜索"
+                android:textColor="@color/blackText"
+                android:textSize="17sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_toLeftOf="@id/search_tv"
+                android:background="@color/homeGrey" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/tag_ll"
+                layout="@layout/layout_search_tag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:visibility="gone"
+                android:textColor="@color/blackText"
+                android:gravity="center"
+                android:id="@+id/null_tv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="没有相关新闻" />
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/news_recycle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

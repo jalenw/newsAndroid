@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.intexh.news.moudle.mine.ui.ApplyAuthorActivity">
+
+    <RelativeLayout
+        android:id="@+id/bar_rll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/barHeight"
+        android:background="@color/colorAccent">
+
+        <ImageView
+            android:id="@+id/back_iv"
+            android:padding="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="申请成为作者"
+            android:textColor="@color/whiteText"
+            android:textSize="@dimen/titleBar" />
+        <TextView
+            android:textSize="18sp"
+            android:paddingRight="15dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:id="@+id/apply_tv"
+            android:gravity="center"
+            android:text="申请"
+            android:textColor="@color/whiteText" />
+    </RelativeLayout>
+    <TextView
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="5dp"
+        android:padding="15dp"
+        android:text="@string/policy_be_author"
+        android:textColor="@color/assistText"
+        android:textSize="14sp" />
+
+    <View
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/mode_line_bg" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <TextView
+            android:textColor="@color/assistText"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="姓名"
+            android:textSize="14sp" />
+
+        <EditText
+            android:textColor="@color/blackText"
+            android:id="@+id/name_etv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:background="@null"
+            android:gravity="end|center_vertical"
+            android:hint="* 您的身份证姓名"
+            android:textColorHint="@color/assistText"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/mode_line_bg" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <TextView
+            android:textColor="@color/assistText"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="手机号码"
+            android:textSize="14sp" />
+
+        <EditText
+            android:textColor="@color/blackText"
+            android:inputType="number"
+            android:id="@+id/number_etv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:background="@null"
+            android:gravity="end|center_vertical"
+            android:textColorHint="@color/assistText"
+            android:hint="* 使用您本人身份证办理的手机号"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/mode_line_bg" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:textColor="@color/assistText"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="身份证号码"
+            android:textSize="14sp" />
+
+        <EditText
+            android:textColor="@color/blackText"
+            android:inputType="number"
+            android:id="@+id/card_number_etv"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:background="@null"
+            android:gravity="end|center_vertical"
+            android:hint="* 身份证号码"
+            android:textColorHint="@color/assistText"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/mode_line_bg" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center">
+
+        <CheckBox
+            android:id="@+id/check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true" />
+        <TextView
+            android:id="@+id/tag_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/check"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/check"
+            android:text="同意"
+            android:textColor="@color/blackText"
+            android:textSize="13sp" />
+        <TextView
+            android:id="@+id/protcal_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/check"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/tag_tv"
+            android:text="选报软件作者申请协议"
+            android:textColor="#3385ff"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+
+
+
+    <TextView
+        android:textSize="@dimen/assistTextSize"
+        android:textColor="@color/assistText"
+        android:padding="15dp"
+        android:id="@+id/tips_tv"
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="bottom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

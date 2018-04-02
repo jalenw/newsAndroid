@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- 自定义TextView 属性 -->
+    <declare-styleable name="EasyTextView">
+        <attr name="etvShape" format="integer"/>
+        <attr name="etvRadius" format="dimension"/>
+        <attr name="etvTopLeftRadius" format="dimension"/>
+        <attr name="etvTopRightRadius" format="dimension"/>
+        <attr name="etvBottomLeftRadius" format="dimension"/>
+        <attr name="etvBottomRightRadius" format="dimension"/>
+        <attr name="etvPressTextColor" format="color"/>
+        <attr name="etvNormalTextColor" format="color"/>
+        <attr name="etvPressBackgroundColor" format="color"/>
+        <attr name="etvNormalBackgroundColor" format="color"/>
+    </declare-styleable>
+</resources>

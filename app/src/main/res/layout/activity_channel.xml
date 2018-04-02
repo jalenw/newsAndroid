@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mode_default_bg"
+    tools:context="com.intexh.news.moudle.news.ui.ChannelActivity">
+    <RelativeLayout
+        android:id="@+id/bar_rll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/barHeight"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="频道管理"
+            android:textColor="@color/whiteText"
+            android:textSize="@dimen/titleBar"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:padding="8dp"
+            android:id="@+id/search_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="5dp"
+            android:src="@mipmap/close_white" />
+    </RelativeLayout>
+    <TextView
+        android:layout_margin="15dp"
+        android:textSize="15sp"
+        android:id="@+id/tag_my_channel"
+        android:layout_below="@id/bar_rll"
+        android:textColor="@color/blackText"
+        android:text="我的频道"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_toRightOf="@id/tag_my_channel"
+        android:layout_alignBottom="@id/tag_my_channel"
+        android:text="长按拖拽可以排序"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:clickable="true"
+        android:id="@+id/edit_tv"
+        android:layout_marginRight="15dp"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:background="@drawable/shape_button_red_rectangle"
+        android:textColor="@color/redText"
+        android:layout_alignParentRight="true"
+        android:text="编辑"
+        android:layout_alignBottom="@id/tag_my_channel"
+        android:layout_width="60dp"
+        android:layout_height="28dp" />
+    <com.yanzhenjie.recyclerview.swipe.SwipeMenuRecyclerView
+        android:id="@+id/current_recycle"
+        android:layout_below="@id/tag_my_channel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:clickable="true"
+        android:id="@+id/cover_current_tv"
+        android:background="@color/transparent"
+        android:layout_alignBottom="@id/current_recycle"
+        android:layout_alignTop="@id/current_recycle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!--<android.support.v7.widget.RecyclerView-->
+  <!--/>-->
+    <TextView
+        android:layout_margin="15dp"
+        android:textSize="15sp"
+        android:id="@+id/tag_channel_list"
+        android:layout_below="@id/current_recycle"
+        android:textColor="@color/blackText"
+        android:text="添加频道"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_toRightOf="@id/tag_channel_list"
+        android:layout_alignBottom="@id/tag_channel_list"
+        android:text="点击添加"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/all_recycle"
+        android:layout_below="@id/tag_channel_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:clickable="true"
+        android:layout_alignTop="@id/all_recycle"
+        android:layout_alignBottom="@id/all_recycle"
+        android:gravity="center"
+        android:id="@+id/cover_all_tv"
+        android:background="@color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>

@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:background="@color/redText"
+        android:paddingRight="15dp">
+
+        <ImageView
+            android:id="@+id/avarter_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:padding="15dp"
+            android:src="@mipmap/default_avarter" />
+
+        <TextView
+            android:id="@+id/name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/avarter_iv"
+            android:paddingBottom="10dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:text="点击登录"
+            android:textColor="@color/whiteText"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/edit_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/name_tv"
+            android:layout_alignParentRight="true"
+            android:drawableRight="@mipmap/right_arrow"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="编辑资料"
+            android:textColor="@color/whiteText"
+            android:textSize="16sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/store_ll"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_r_white_bg_selector"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:drawableLeft="@mipmap/mine_store"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="收藏"
+                android:textColor="@color/blackText"
+                android:textSize="16sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/comment_ll"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_r_white_bg_selector"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:drawableLeft="@mipmap/mine_cpmmit"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="评论"
+                android:textColor="@color/blackText"
+                android:textSize="16sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="56dp"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:weightSum="2">-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/store_tv"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@drawable/button_r_white_bg_selector"-->
+            <!--android:clickable="true"-->
+            <!--android:drawableLeft="@mipmap/mine_store"-->
+            <!--android:drawablePadding="5dp"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:paddingLeft="50dp"-->
+            <!--android:text="收藏"-->
+            <!--android:textColor="@color/blackText"-->
+            <!--android:textSize="16sp" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/comment_tv"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@drawable/button_r_white_bg_selector"-->
+            <!--android:clickable="true"-->
+            <!--android:drawableLeft="@mipmap/mine_cpmmit"-->
+            <!--android:drawablePadding="5dp"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:paddingLeft="50dp"-->
+            <!--android:text="评论"-->
+            <!--android:textColor="@color/blackText"-->
+            <!--android:textSize="16sp" />-->
+    <!--</LinearLayout>-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/mode_default_bg">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="20dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <LinearLayout
+                android:id="@+id/info_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shape_layout_bg"
+                android:orientation="vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/add_info_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:text="添加资讯"
+                    android:textColor="@color/blackText"
+                    android:textSize="17sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/title_et"
+                    android:background="@color/mode_line_gap" />
+
+                <TextView
+                    android:id="@+id/manage_info_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:text="管理资讯"
+                    android:textColor="@color/blackText"
+                    android:textSize="17sp" />
+
+                <View
+                    android:id="@+id/check_info_v"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/title_et"
+                    android:background="@color/mode_line_gap" />
+
+                <TextView
+                    android:id="@+id/check_info_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:text="审核资讯"
+                    android:textColor="@color/blackText"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shape_layout_bg"
+                android:orientation="vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:id="@+id/share_news_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:text="邀请朋友一起看新闻"
+                    android:textColor="@color/blackText"
+                    android:textSize="17sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/title_et"
+                    android:background="@color/mode_line_gap" />
+
+                <TextView
+                    android:id="@+id/be_author_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:text="申请成为作者"
+                    android:textColor="@color/blackText"
+                    android:textSize="17sp" />
+
+                <View
+                    android:id="@+id/author_v"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/mode_line_gap" />
+
+                <TextView
+                    android:id="@+id/notification_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:text="消息通知"
+                    android:textColor="@color/blackText"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shape_layout_bg"
+                android:orientation="vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:id="@+id/ads_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:text="投放广告"
+                    android:textColor="@color/blackText"
+                    android:textSize="17sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/title_et"
+                    android:background="@color/mode_line_gap" />
+
+                <TextView
+                    android:id="@+id/cooperation_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:text="商务合作"
+                    android:textColor="@color/blackText"
+                    android:textSize="17sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shape_layout_bg"
+                android:orientation="vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="文字大小"
+                        android:textColor="@color/blackText"
+                        android:textSize="17sp" />
+
+                    <RadioGroup
+                        android:id="@+id/text_mode_rg"
+                        android:layout_width="180dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/text_min_rb"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_radio_left"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="小"
+                            android:textColor="@drawable/tab_text_selector" />
+
+                        <RadioButton
+                            android:id="@+id/text_mid_rb"
+
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_radio_mid"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="标准"
+                            android:textColor="@drawable/tab_text_selector" />
+
+                        <RadioButton
+                            android:id="@+id/text_max_rb"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_radio_right"
+                            android:button="@null"
+                            android:gravity="center"
+                            android:text="大"
+                            android:textColor="@drawable/tab_text_selector" />
+                    </RadioGroup>
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/title_et"
+                    android:background="@color/mode_line_gap" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="阅读模式"
+                        android:textColor="@color/blackText"
+                        android:textSize="17sp" />
+
+                    <RadioGroup
+                        android:id="@+id/light_mode_rg"
+                        android:layout_width="180dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+
+                        <RadioButton
+                            android:id="@+id/light_white_rb"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="1"
+                            android:text="白天"
+                            android:textColor="@color/blackText"
+                            android:textSize="14dp" />
+
+                        <RadioButton
+                            android:id="@+id/light_dark_rb"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="1"
+                            android:text="夜间"
+                            android:textColor="@color/blackText"
+                            android:textSize="14dp" />
+
+                        <RadioButton
+                            android:id="@+id/light_auto_rb"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="1"
+                            android:text="智能"
+                            android:textColor="@color/blackText"
+                            android:textSize="14dp" />
+                    </RadioGroup>
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/title_et"
+                    android:background="@color/mode_line_gap" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="要闻推送"
+                        android:textColor="@color/blackText"
+                        android:textSize="17sp" />
+
+                    <Switch
+                        android:id="@+id/push_state_sw"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/shape_layout_bg"
+                android:orientation="vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    android:id="@+id/cover_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:text="新闻封面"
+                    android:textColor="@color/blackText"
+                    android:textSize="17sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/title_et"
+                    android:background="@color/mode_line_gap" />
+
+                <TextView
+                    android:id="@+id/feed_back"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:text="意见反馈"
+                    android:textColor="@color/blackText"
+                    android:textSize="17sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/title_et"
+                    android:background="@color/mode_line_gap" />
+
+                <TextView
+                    android:id="@+id/setting_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:text="设置"
+                    android:textColor="@color/blackText"
+                    android:textSize="17sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

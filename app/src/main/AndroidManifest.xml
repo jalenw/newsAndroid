@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.intexh.news">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- <uses-permission android:name="android.permission.GET_TASKS" /> -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+
+    <application
+        android:name=".base.MainApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="Mob-AppKey"
+            android:value="228abbf8e94b1" />
+        <meta-data
+            android:name="Mob-AppSecret"
+            android:value="fdd62c9ab693044e50c10573e94dbe02" />
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="ba443aa99fae29bb6fbcf0cc30648bb0" />
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5a95771ef29d9830ba000305" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="AndroidNews" />
+        <!-- Netchange -->
+        <receiver android:name=".moudle.main.service.NetworkChangeReceiver" />
+
+        <service android:name="com.amap.api.location.APSService" />
+        <!-- ShareSDK的activity -->
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+
+            <!-- 调用新浪原生SDK，需要注册的回调activity -->
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <!-- 集成line客户端登录授权，需要添如下格式的过滤器 -->
+            <intent-filter>
+                <data android:scheme="line.1477692153" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="cn.sharesdk.tencent.qq.ReceiveActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent1106431527" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- <activity -->
+        <!-- android:name=".wxapi.WXEntryActivity" -->
+        <!-- android:configChanges="keyboardHidden|orientation|screenSize" -->
+        <!-- android:exported="true" -->
+        <!-- android:screenOrientation="portrait" -->
+        <!-- android:theme="@android:style/Theme.Translucent.NoTitleBar" /> -->
+        <!-- 钉钉分享回调 -->
+        <activity
+            android:name=".ddshare.DDShareActivity"
+            android:exported="true"
+            android:launchMode="singleInstance">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".moudle.main.ui.MainActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustPan" />
+        <activity
+            android:name=".moudle.main.ui.TransitionActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".moudle.main.ui.SplashActivity" />
+        <activity android:name=".moudle.disclose.ui.DraftActivity" />
+        <activity android:name=".moudle.news.ui.ChannelActivity" />
+        <activity
+            android:name=".moudle.news.ui.SearchActivity"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity android:name=".moudle.mine.ui.LoginActivity" />
+        <activity android:name=".moudle.mine.ui.RegisterActivity" />
+        <activity android:name=".moudle.news.ui.CommentActivity" />
+        <activity android:name=".moudle.mine.ui.StoreUniversalActivity" />
+        <activity android:name=".moudle.mine.ui.ApplyAuthorActivity" />
+        <activity android:name=".moudle.mine.ui.NoticeActivity" />
+        <activity android:name=".moudle.mine.ui.InverstAdsActivity" />
+        <activity android:name=".moudle.mine.ui.CooperationActivity" />
+        <activity android:name=".moudle.mine.ui.FeedBackActivity" />
+        <activity android:name=".moudle.mine.ui.SettingActivity" />
+        <activity android:name=".moudle.mine.ui.MessageLoginActivity" />
+        <activity android:name=".moudle.mine.ui.ReverseInfoActivity" />
+        <activity android:name=".moudle.mine.ui.AddInfoActivity" />
+        <activity android:name=".moudle.mine.ui.ManagerInfoActivity" />
+        <activity android:name=".moudle.disclose.ui.DisCloseActivity" />
+        <activity android:name=".moudle.mine.ui.InfoDraftActivity" />
+        <activity android:name=".moudle.news.ui.ReportNewsActivity" />
+        <activity android:name=".moudle.mine.ui.NewsCoverActivity" />
+        <activity android:name=".html.ui.WebViewActivity" />
+        <activity android:name=".moudle.mine.ui.UniversalDetailActivity" />
+        <activity android:name=".moudle.news.ui.ShowPic" />
+        <!-- we chat pay -->
+        <activity android:name=".wxapi.WXPayEntryActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="wx0070a9a5bbfef3a0" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.alipay.sdk.app.H5AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity android:name=".moudle.mine.ui.RebongdingActivity" />
+        <activity android:name=".moudle.mine.ui.AboutMeActivity" />
+        <activity android:name=".moudle.mine.ui.ProtacolActivity" />
+
+        <!-- JPush -->
+        <receiver
+            android:name=".module.message.push.JPushReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" />
+                <!-- Required  用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.UNREGISTRATION" />
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" />
+                <!-- Required  用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" />
+                <!-- Required  用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" />
+                <!-- Required  用户打开自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.CONNECTION" />
+                <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="com.intexh.news" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>

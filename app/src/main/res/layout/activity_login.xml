@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/mode_default_bg"
+    >
+
+    <RelativeLayout
+        android:id="@+id/bar_rll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/barHeight"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/back_iv"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="登录"
+            android:textColor="@color/whiteText"
+            android:textSize="@dimen/titleBar" />
+        <TextView
+            android:id="@+id/register_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="注册"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tag_phone"
+        android:layout_width="70dp"
+        android:layout_height="45dp"
+        android:layout_below="@id/bar_rll"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:text="手机号"
+        android:textColor="@color/blackText" />
+
+    <EditText
+        android:id="@+id/phone_et"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignBottom="@id/tag_phone"
+        android:layout_toRightOf="@id/tag_phone"
+        android:background="@color/white"
+        android:hint="请输入手机号"
+        android:paddingLeft="10dp"
+        android:textSize="14sp" />
+
+    <TextView
+
+        android:id="@+id/tag_psw"
+        android:layout_width="70dp"
+        android:layout_height="45dp"
+        android:layout_below="@id/tag_phone"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="15dp"
+        android:text="密码"
+        android:textColor="@color/blackText" />
+
+    <EditText
+        android:id="@+id/psw_et"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignBottom="@id/tag_psw"
+        android:layout_toRightOf="@id/tag_psw"
+        android:layout_weight="7"
+        android:background="@color/white"
+        android:hint="请输入密码"
+        android:paddingLeft="10dp"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/forget_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/psw_et"
+        android:padding="15dp"
+        android:text="忘记密码？"
+        android:textColor="@color/redText" />
+
+    <Button
+        android:id="@+id/login_btn"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/forget_tv"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/shape_login_button_off"
+        android:text="登录"
+        android:textColor="@color/white" />
+</RelativeLayout>
